@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Flyttfirma Göteborg — MoveOn | Landshövdingehus, Hisingen, hela staden</title>
+<meta name="description" content="Flyttfirma i Göteborg med lokalkännedom om Linné, Haga, Majorna, Örgryte och Hisingen. Fast pris. RUT-avdrag. Punktlighetsgaranti. Offert inom 24 timmar." />
+<meta name="theme-color" content="#1E3B2F" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,0..100;1,9..144,300..900,0..100&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --paper:#EDE6D6; --paper-deep:#E2DAC6; --paper-soft:#F3EEE0;
+    --ink:#161512; --ink-soft:#3B3A34; --mute:#8B8473; --line:#CFC6B2;
+    --moss:#1E3B2F; --moss-deep:#132720; --moss-light:#34563F;
+    --rust:#B5543A; --gold:#C79B3F;
+    --ff-display:"Fraunces","Georgia",serif;
+    --ff-body:"Instrument Sans",-apple-system,sans-serif;
+    --ff-mono:"JetBrains Mono",ui-monospace,monospace;
+    --max:1460px;
+    --gutter:clamp(1.25rem,4vw,3rem);
+    --ease:cubic-bezier(0.22,1,0.36,1);
+  }
+  *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; }
+  body {
+    background:var(--paper); color:var(--ink);
+    font-family:var(--ff-body); font-size:1.0625rem; line-height:1.55;
+    -webkit-font-smoothing:antialiased; overflow-x:hidden;
+  }
+  body::before {
+    content:""; position:fixed; inset:0; pointer-events:none; z-index:1;
+    opacity:0.32; mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.09  0 0 0 0 0.08  0 0 0 0 0.07  0 0 0 0.18 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+  a { color:inherit; text-decoration:none; }
+  ul { list-style:none; }
+  ::selection { background:var(--moss); color:var(--paper); }
+
+  .wrap { max-width:var(--max); margin:0 auto; padding:0 var(--gutter); position:relative; z-index:2; }
+
+  .top { padding:1.5rem 0; border-bottom:1px solid var(--line); background:rgba(237,230,214,0.85); backdrop-filter:saturate(1.2) blur(8px); position:sticky; top:0; z-index:50; }
+  .top__inner { display:flex; align-items:center; justify-content:space-between; gap:1.5rem; }
+  .logo { font-family:var(--ff-display); font-size:1.5rem; font-weight:500; letter-spacing:-0.02em; display:flex; align-items:center; gap:0.35rem; }
+  .logo .dot { width:6px; height:6px; background:var(--moss); border-radius:50%; }
+  .top__actions { display:flex; align-items:center; gap:1.5rem; }
+  .top__link { font-family:var(--ff-mono); font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-soft); transition:color 0.3s; }
+  .top__link:hover { color:var(--moss); }
+  .top__cta { display:inline-flex; align-items:center; gap:0.5rem; padding:0.65rem 1.25rem; background:var(--moss); color:var(--paper); font-family:var(--ff-mono); font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase; transition:background 0.3s; }
+  .top__cta:hover { background:var(--moss-deep); }
+
+  .hero { padding:clamp(3.5rem,8vw,6rem) 0 clamp(3rem,6vw,5rem); border-bottom:1px solid var(--line); position:relative; overflow:hidden; }
+  .hero__grid { display:grid; grid-template-columns:1.4fr 1fr; gap:clamp(2rem,5vw,5rem); align-items:end; }
+  .eyebrow { font-family:var(--ff-mono); font-size:0.72rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--ink-soft); display:flex; align-items:center; gap:0.75rem; }
+  .eyebrow::before { content:""; width:28px; height:1px; background:var(--ink-soft); }
+  .eyebrow .dot { width:6px; height:6px; border-radius:50%; background:var(--moss); display:inline-block; }
+  h1 { font-family:var(--ff-display); font-weight:400; font-size:clamp(3rem,9vw,7rem); line-height:0.98; letter-spacing:-0.035em; margin-top:1.5rem; }
+  h1 em { font-style:italic; color:var(--moss); font-variation-settings:"opsz" 144, "SOFT" 90; }
+  .lede { font-family:var(--ff-display); font-weight:300; font-size:clamp(1.15rem,1.8vw,1.4rem); line-height:1.45; color:var(--ink-soft); max-width:48ch; margin-top:1.75rem; }
+  .hero__side { border:1px solid var(--line); padding:2rem; background:var(--paper-soft); position:relative; }
+  .hero__side::before { content:""; position:absolute; top:-1px; right:-1px; width:40px; height:40px; border-top:1px solid var(--gold); border-right:1px solid var(--gold); }
+  .hero__side h4 { font-family:var(--ff-mono); font-size:0.72rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--mute); margin-bottom:1.25rem; font-weight:500; }
+  .hero__factoids { display:flex; flex-direction:column; gap:1.25rem; }
+  .hero__fact { display:grid; grid-template-columns:auto 1fr; gap:1rem; padding-bottom:1.25rem; border-bottom:1px solid var(--line); }
+  .hero__fact:last-child { border-bottom:0; padding-bottom:0; }
+  .hero__fact__num { font-family:var(--ff-display); font-weight:400; font-size:2.25rem; line-height:1; color:var(--moss); font-variation-settings:"opsz" 144; letter-spacing:-0.04em; }
+  .hero__fact__lbl { font-size:0.88rem; color:var(--ink-soft); line-height:1.4; align-self:center; }
+  .hero__meta { display:flex; gap:1.5rem; flex-wrap:wrap; margin-top:2.5rem; padding-top:1.75rem; border-top:1px solid var(--line); font-family:var(--ff-mono); font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-soft); }
+  .hero__meta span { display:inline-flex; align-items:center; gap:0.5rem; }
+  .hero__meta strong { color:var(--ink); font-weight:500; }
+
+  .section { padding:clamp(4rem,8vw,7rem) 0; border-bottom:1px solid var(--line); }
+  .section-head { display:grid; grid-template-columns:1.5fr 1fr; gap:3rem; align-items:end; margin-bottom:clamp(2.5rem,5vw,4rem); }
+  .section-head h2 { font-family:var(--ff-display); font-weight:400; font-size:clamp(2.25rem,5vw,3.75rem); line-height:1.05; letter-spacing:-0.025em; }
+  .section-head h2 em { font-style:italic; color:var(--moss); font-variation-settings:"opsz" 144, "SOFT" 80; }
+  .section-head p { font-size:1.02rem; color:var(--ink-soft); line-height:1.5; }
+
+  .areas { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1px; background:var(--line); border:1px solid var(--line); }
+  .area { padding:2rem 1.75rem; background:var(--paper); display:flex; flex-direction:column; gap:0.65rem; transition:background 0.4s; }
+  .area:hover { background:var(--paper-soft); }
+  .area__name { font-family:var(--ff-display); font-size:1.5rem; font-weight:500; letter-spacing:-0.015em; }
+  .area__code { font-family:var(--ff-mono); font-size:0.7rem; letter-spacing:0.14em; color:var(--gold); text-transform:uppercase; }
+  .area__desc { font-size:0.93rem; color:var(--ink-soft); line-height:1.5; }
+  .area__tags { display:flex; gap:0.5rem; flex-wrap:wrap; margin-top:0.5rem; }
+  .area__tag { font-family:var(--ff-mono); font-size:0.65rem; letter-spacing:0.08em; text-transform:uppercase; padding:0.22rem 0.55rem; border:1px solid var(--line); color:var(--ink-soft); }
+
+  .dark { background:var(--moss); color:var(--paper-soft); border-bottom:0; }
+  .dark .section-head h2 { color:var(--paper-soft); }
+  .dark .section-head h2 em { color:var(--gold); }
+  .dark .section-head p { color:rgba(237,230,214,0.7); }
+  .dark .eyebrow { color:rgba(237,230,214,0.65); }
+  .dark .eyebrow::before { background:rgba(237,230,214,0.4); }
+  .challenges { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1.5rem; }
+  .challenge { padding:1.75rem 1.5rem; border:1px solid rgba(237,230,214,0.15); background:rgba(19,39,32,0.4); transition:all 0.4s var(--ease); }
+  .challenge:hover { border-color:var(--gold); }
+  .challenge__num { font-family:var(--ff-mono); font-size:0.72rem; letter-spacing:0.14em; color:var(--gold); margin-bottom:1rem; display:block; }
+  .challenge h4 { font-family:var(--ff-display); font-size:1.25rem; font-weight:500; color:var(--paper); margin-bottom:0.75rem; letter-spacing:-0.015em; }
+  .challenge p { font-size:0.92rem; color:rgba(237,230,214,0.72); line-height:1.5; }
+
+  .pull { padding:clamp(4rem,8vw,7rem) 0; border-bottom:1px solid var(--line); background:var(--paper-soft); }
+  .pull__inner { max-width:920px; margin:0 auto; text-align:center; padding:0 var(--gutter); }
+  .pull__mark { font-family:var(--ff-display); font-size:6rem; line-height:0.5; color:var(--gold); font-style:italic; margin-bottom:1rem; }
+  .pull p { font-family:var(--ff-display); font-weight:300; font-size:clamp(1.5rem,3vw,2.25rem); line-height:1.3; letter-spacing:-0.015em; color:var(--ink); margin-bottom:1.5rem; }
+  .pull p em { font-style:italic; color:var(--moss); font-variation-settings:"opsz" 144, "SOFT" 80; }
+  .pull__attr { font-family:var(--ff-mono); font-size:0.72rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-soft); }
+
+  .cta-final { padding:clamp(4rem,8vw,7rem) 0; background:var(--moss-deep); color:var(--paper-soft); position:relative; overflow:hidden; }
+  .cta-final::before { content:""; position:absolute; top:0; left:0; right:0; bottom:0; background: radial-gradient(circle at 20% 30%, rgba(199,155,63,0.15), transparent 40%), radial-gradient(circle at 80% 70%, rgba(52,86,63,0.3), transparent 50%); pointer-events:none; }
+  .cta-final__inner { position:relative; z-index:2; max-width:900px; margin:0 auto; text-align:center; padding:0 var(--gutter); }
+  .cta-final .eyebrow { color:rgba(237,230,214,0.65); justify-content:center; }
+  .cta-final .eyebrow::before { background:rgba(237,230,214,0.4); }
+  .cta-final h2 { font-family:var(--ff-display); font-weight:400; font-size:clamp(2.5rem,6vw,4.5rem); line-height:1.02; letter-spacing:-0.03em; color:var(--paper); margin-top:1.5rem; }
+  .cta-final h2 em { font-style:italic; color:var(--gold); font-variation-settings:"opsz" 144, "SOFT" 90; }
+  .cta-final p { font-family:var(--ff-display); font-weight:300; font-size:clamp(1.1rem,1.8vw,1.35rem); color:rgba(237,230,214,0.75); margin:1.75rem auto 0; max-width:54ch; }
+  .cta-final__btns { display:flex; gap:1rem; flex-wrap:wrap; justify-content:center; margin-top:2.5rem; }
+  .btn { display:inline-flex; align-items:center; gap:0.6rem; padding:1rem 1.75rem; font-family:var(--ff-mono); font-size:0.72rem; letter-spacing:0.14em; text-transform:uppercase; transition:all 0.3s var(--ease); }
+  .btn--gold { background:var(--gold); color:var(--moss-deep); }
+  .btn--gold:hover { background:var(--paper); transform:translateY(-2px); }
+  .btn--ghost { border:1px solid rgba(237,230,214,0.4); color:var(--paper); }
+  .btn--ghost:hover { border-color:var(--gold); color:var(--gold); }
+
+  .btm { border-top:1px solid rgba(255,255,255,0.08); padding:2.5rem 0; background:var(--moss-deep); color:rgba(237,230,214,0.7); }
+  .btm__inner { display:flex; flex-wrap:wrap; gap:1.5rem; justify-content:space-between; align-items:center; font-size:0.85rem; }
+  .btm a { color:rgba(237,230,214,0.7); border-bottom:1px solid transparent; transition:all 0.3s; }
+  .btm a:hover { color:var(--gold); border-bottom-color:var(--gold); }
+  .btm__legal { display:flex; gap:1.5rem; flex-wrap:wrap; }
+
+  @media (max-width:900px) {
+    .hero__grid { grid-template-columns:1fr; gap:3rem; }
+    .section-head { grid-template-columns:1fr; gap:1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top__inner">
+    <a href="../" class="logo">MoveOn<span class="dot"></span></a>
+    <div class="top__actions">
+      <a href="../" class="top__link">Moveon.se</a>
+      <a href="tel:+4610199000" class="top__link">010 – 199 00 00</a>
+      <a href="../#offert" class="top__cta">Begär offert</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero__grid">
+      <div>
+        <span class="eyebrow"><span class="dot"></span>Lokal närvaro · Göteborg</span>
+        <h1>Flyttfirma i <em>Göteborg.</em><br>Landshövdinge&shy;hus, hissar<br>och hela vägen till Hisingen.</h1>
+        <p class="lede">Göteborg är en stad som bär på sin historia i varje trapphus. Vi förstår skillnaden mellan ett landshövdinge&shy;hus i Majorna och ett nyproducerat i Eriksberg — och vi anpassar flytten efter huset, inte tvärtom.</p>
+        <div class="hero__meta">
+          <span><strong>Fast pris</strong></span>
+          <span><strong>RUT-avdrag</strong> ingår</span>
+          <span><strong>Offert</strong> inom 24h</span>
+          <span><strong>Punktlighets&shy;garanti</strong></span>
+        </div>
+      </div>
+      <aside class="hero__side">
+        <h4>Göteborg i siffror</h4>
+        <div class="hero__factoids">
+          <div class="hero__fact">
+            <div class="hero__fact__num">1 947</div>
+            <div class="hero__fact__lbl">Flyttar i Göteborgsområdet sedan 2014</div>
+          </div>
+          <div class="hero__fact">
+            <div class="hero__fact__num">4.9</div>
+            <div class="hero__fact__lbl">Snittbetyg från Göteborgs&shy;kunder (Trustpilot)</div>
+          </div>
+          <div class="hero__fact">
+            <div class="hero__fact__num">21 min</div>
+            <div class="hero__fact__lbl">Snitt&shy;svar på offert&shy;förfrågan dagtid</div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Kapitel 01 · Stadsdelar</span>
+        <h2 style="margin-top:1rem">Från <em>Linné</em> till <em>Hisingen.</em></h2>
+      </div>
+      <p>Göteborg är en stor småstad — varje stadsdel har sin egen karaktär, sina egna trappor, sina egna vägar. Här är områdena där vi är varje vecka.</p>
+    </div>
+
+    <div class="areas">
+      <div class="area">
+        <span class="area__code">01 · 413</span>
+        <h3 class="area__name">Linné &amp; Haga</h3>
+        <p class="area__desc">Landshövdinge&shy;hus i rad — trä på sten, trånga trapphus, ibland utan hiss. Vi kan deras logik.</p>
+        <div class="area__tags"><span class="area__tag">Trappbärning</span><span class="area__tag">Kulturbyggnader</span></div>
+      </div>
+      <div class="area">
+        <span class="area__code">02 · 414</span>
+        <h3 class="area__name">Majorna &amp; Kungsladugård</h3>
+        <p class="area__desc">Äkta göteborgska trähus, grönska och knepig parkering. Vi har dispenser och kompakta lastbilar för de smala gatorna.</p>
+        <div class="area__tags"><span class="area__tag">Smala gator</span><span class="area__tag">Kompakt fordon</span></div>
+      </div>
+      <div class="area">
+        <span class="area__code">03 · 416</span>
+        <h3 class="area__name">Örgryte &amp; Lunden</h3>
+        <p class="area__desc">Villor, sekelskifte, lugn logistik. Oftast bra lastplatser — perfekt för stora, varsamma flyttar.</p>
+        <div class="area__tags"><span class="area__tag">Villaflytt</span><span class="area__tag">Stora bohag</span></div>
+      </div>
+      <div class="area">
+        <span class="area__code">04 · 411</span>
+        <h3 class="area__name">Vasastan &amp; Centrum</h3>
+        <p class="area__desc">Stenstaden, större våningar, tunga dörrar. Många bostäder utan hiss eller med små hissar som inte rymmer soffor.</p>
+        <div class="area__tags"><span class="area__tag">Demontering</span><span class="area__tag">Stora möbler</span></div>
+      </div>
+      <div class="area">
+        <span class="area__code">05 · 417</span>
+        <h3 class="area__name">Hisingen</h3>
+        <p class="area__desc">Lundby, Kyrkbyn, Torslanda, Backa, Biskopsgården. Från Volvo till vila — vi kör hela Hisingen varje dag.</p>
+        <div class="area__tags"><span class="area__tag">Bred täckning</span><span class="area__tag">Logistik</span></div>
+      </div>
+      <div class="area">
+        <span class="area__code">06 · 417</span>
+        <h3 class="area__name">Eriksberg &amp; Lindholmen</h3>
+        <p class="area__desc">Nyproduktion, bra hissar, tydliga lastplatser. Enklaste segmentet — vi håller priset därefter.</p>
+        <div class="area__tags"><span class="area__tag">Modernt</span><span class="area__tag">Enkel logistik</span></div>
+      </div>
+      <div class="area">
+        <span class="area__code">07 · 415</span>
+        <h3 class="area__name">Gamlestaden &amp; Bagaregården</h3>
+        <p class="area__desc">Blandat: industri&shy;omvandling, nya lägenheter, äldre trähus. Vi gör minst ett par flyttar här varje vecka.</p>
+        <div class="area__tags"><span class="area__tag">Blandat område</span></div>
+      </div>
+      <div class="area">
+        <span class="area__code">08 · 431+</span>
+        <h3 class="area__name">Mölndal, Partille &amp; kranskommunerna</h3>
+        <p class="area__desc">Vi täcker hela storstadsområdet. Villor, radhus, kontorsflyttar i Mölnlycke, Lerum, Kungälv.</p>
+        <div class="area__tags"><span class="area__tag">Kranskommuner</span><span class="area__tag">Villa</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section dark">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Kapitel 02 · Utmaningar</span>
+        <h2 style="margin-top:1rem">Göteborg har sina egna <em>spelregler.</em></h2>
+      </div>
+      <p>Vi känner till det som utom&shy;stående firmor missar — och det gör skillnad på flyttdagen.</p>
+    </div>
+
+    <div class="challenges">
+      <div class="challenge">
+        <span class="challenge__num">01</span>
+        <h4>Landshövdinge&shy;husens trappor</h4>
+        <p>Trä på sten, smala svängar, ofta utan hiss. Vi har bärstroppar, kranutrustning och folk som kan lyfta pianon upp för tredje våningen — varsamt.</p>
+      </div>
+      <div class="challenge">
+        <span class="challenge__num">02</span>
+        <h4>Älvöver&shy;farter &amp; trafik&shy;störningar</h4>
+        <p>Götaälvbron, Marieholms&shy;leden, Tingstads&shy;tunneln — en stängd förbindelse kan äta en halv dag. Vi följer trafiken dagligen och ombokar rutten om det behövs.</p>
+      </div>
+      <div class="challenge">
+        <span class="challenge__num">03</span>
+        <h4>Trängselskatt &amp; miljözoner</h4>
+        <p>Våra bilar uppfyller Göteborgs miljözons&shy;krav. Trängselskatten specificeras transparent i offerten om den tillfaller — inga överraskningar.</p>
+      </div>
+      <div class="challenge">
+        <span class="challenge__num">04</span>
+        <h4>Smala gator i kvarters&shy;bebyggelse</h4>
+        <p>Majorna och Kungsladugård har gator där en större flyttbil fastnar. Vi har mindre specialfordon för just dessa områden.</p>
+      </div>
+      <div class="challenge">
+        <span class="challenge__num">05</span>
+        <h4>Parkerings&shy;bevakning</h4>
+        <p>Centrum har snabb parkerings&shy;bevakning. Vi löser tillstånd i förväg och har rutiner för att slippa bot — vilket annars ofta blir kundens kostnad.</p>
+      </div>
+      <div class="challenge">
+        <span class="challenge__num">06</span>
+        <h4>Vinter &amp; väder</h4>
+        <p>Göteborgs fukt och tidiga snödagar på höstsidan ställer krav på skydd för möbler och golv. Vi använder gummiskydd och isol&shy;skynken — alltid, oavsett.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pull">
+  <div class="pull__inner">
+    <div class="pull__mark">"</div>
+    <p>Att flytta soffan ut ur ett landshövdinge&shy;hus på Mariaplan — det trodde jag var omöjligt. De gjorde det <em>utan ett ljud</em>, utan en skråma.</p>
+    <span class="pull__attr">— Marcus Lindqvist · Majorna → Örgryte · februari 2026</span>
+  </div>
+</section>
+
+<section class="cta-final">
+  <div class="cta-final__inner">
+    <span class="eyebrow">Redo?</span>
+    <h2>Begär offert för din <em>Göteborgs&shy;flytt.</em></h2>
+    <p>Kostnadsfri offert inom 24 timmar. Fast pris. RUT-avdrag ingår. Inga dolda kostnader — någonsin.</p>
+    <div class="cta-final__btns">
+      <a href="../#offert" class="btn btn--gold">Begär offert →</a>
+      <a href="tel:+4610199000" class="btn btn--ghost">010 – 199 00 00</a>
+    </div>
+  </div>
+</section>
+
+<footer class="btm">
+  <div class="wrap btm__inner">
+    <span>© 2026 MoveOn Flytt &amp; Logistik AB · Regional bas: Göteborg</span>
+    <div class="btm__legal">
+      <a href="../integritetspolicy/">Integritetspolicy</a>
+      <a href="../cookiepolicy/">Cookiepolicy</a>
+      <a href="../villkor/">Villkor</a>
+      <a href="../">Startsida</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

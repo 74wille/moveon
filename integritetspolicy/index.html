@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Integritetspolicy — MoveOn</title>
+<meta name="description" content="Så behandlar MoveOn dina personuppgifter. Klart och transparent, enligt GDPR." />
+<meta name="theme-color" content="#1E3B2F" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,0..100;1,9..144,300..900,0..100&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --paper:#EDE6D6; --paper-deep:#E2DAC6; --paper-soft:#F3EEE0;
+    --ink:#161512; --ink-soft:#3B3A34; --mute:#8B8473; --line:#CFC6B2;
+    --moss:#1E3B2F; --moss-deep:#132720; --moss-light:#34563F;
+    --rust:#B5543A; --gold:#C79B3F;
+    --ff-display:"Fraunces","Georgia",serif;
+    --ff-body:"Instrument Sans",-apple-system,sans-serif;
+    --ff-mono:"JetBrains Mono",ui-monospace,monospace;
+    --max:1100px;
+    --gutter:clamp(1.25rem,4vw,3rem);
+  }
+  *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; }
+  body {
+    background:var(--paper); color:var(--ink);
+    font-family:var(--ff-body); font-size:1.0625rem; line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  body::before {
+    content:""; position:fixed; inset:0; pointer-events:none; z-index:1;
+    opacity:0.3; mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.09  0 0 0 0 0.08  0 0 0 0 0.07  0 0 0 0.18 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+  a { color:inherit; text-decoration:none; }
+  ul { list-style:none; }
+  ::selection { background:var(--moss); color:var(--paper); }
+
+  .wrap { max-width:var(--max); margin:0 auto; padding:0 var(--gutter); position:relative; z-index:2; }
+
+  /* -------- Header -------- */
+  .top {
+    padding:1.75rem 0; border-bottom:1px solid var(--line); position:relative; z-index:10;
+    background:rgba(237,230,214,0.85); backdrop-filter:saturate(1.2) blur(8px);
+  }
+  .top__inner { display:flex; align-items:center; justify-content:space-between; gap:1.5rem; }
+  .logo {
+    font-family:var(--ff-display); font-size:1.5rem; font-weight:500;
+    letter-spacing:-0.02em; display:flex; align-items:center; gap:0.35rem;
+  }
+  .logo .dot { width:6px; height:6px; background:var(--moss); border-radius:50%; }
+  .back {
+    font-family:var(--ff-mono); font-size:0.7rem; letter-spacing:0.12em;
+    text-transform:uppercase; color:var(--ink-soft); display:inline-flex; align-items:center; gap:0.5rem;
+    transition:color 0.3s;
+  }
+  .back:hover { color:var(--moss); }
+  .back svg { transition:transform 0.3s cubic-bezier(0.22,1,0.36,1); }
+  .back:hover svg { transform:translateX(-3px); }
+
+  /* -------- Hero -------- */
+  .hero {
+    padding:clamp(4rem,9vw,7rem) 0 clamp(3rem,6vw,4.5rem);
+    border-bottom:1px solid var(--line);
+  }
+  .eyebrow {
+    font-family:var(--ff-mono); font-size:0.72rem; letter-spacing:0.15em;
+    text-transform:uppercase; color:var(--ink-soft); display:flex; align-items:center; gap:0.75rem;
+  }
+  .eyebrow::before {
+    content:""; width:28px; height:1px; background:var(--ink-soft);
+  }
+  h1 {
+    font-family:var(--ff-display); font-weight:400;
+    font-size:clamp(2.75rem,7vw,5.5rem); line-height:1.02;
+    letter-spacing:-0.03em; margin-top:1.25rem;
+  }
+  h1 em {
+    font-style:italic; color:var(--moss);
+    font-variation-settings:"opsz" 144, "SOFT" 80;
+  }
+  .lede {
+    font-family:var(--ff-display); font-weight:300;
+    font-size:clamp(1.15rem,2vw,1.4rem); line-height:1.5;
+    color:var(--ink-soft); max-width:60ch; margin-top:2rem;
+  }
+  .updated {
+    font-family:var(--ff-mono); font-size:0.72rem; letter-spacing:0.12em;
+    text-transform:uppercase; color:var(--mute); margin-top:2.5rem;
+    padding-top:1.25rem; border-top:1px solid var(--line);
+  }
+
+  /* -------- Article -------- */
+  .article {
+    padding:clamp(3rem,6vw,5rem) 0 clamp(4rem,8vw,7rem);
+    display:grid; grid-template-columns:220px 1fr; gap:clamp(2rem,5vw,5rem);
+    align-items:start;
+  }
+  .toc {
+    position:sticky; top:2rem;
+    font-size:0.88rem;
+  }
+  .toc h5 {
+    font-family:var(--ff-mono); font-size:0.7rem; letter-spacing:0.14em;
+    text-transform:uppercase; color:var(--mute); margin-bottom:1rem;
+    font-weight:500;
+  }
+  .toc ul { display:flex; flex-direction:column; gap:0.55rem; }
+  .toc a {
+    color:var(--ink-soft); border-left:1px solid var(--line);
+    padding:0.15rem 0 0.15rem 0.9rem; transition:all 0.3s;
+    display:block;
+  }
+  .toc a:hover { color:var(--moss); border-left-color:var(--moss); }
+
+  .body h2 {
+    font-family:var(--ff-display); font-weight:400;
+    font-size:clamp(1.65rem,3vw,2.2rem); letter-spacing:-0.02em;
+    margin:2.75rem 0 1rem; line-height:1.15;
+    scroll-margin-top:2rem;
+  }
+  .body h2:first-child { margin-top:0; }
+  .body h2 .num {
+    font-family:var(--ff-mono); font-size:0.7rem; letter-spacing:0.12em;
+    color:var(--gold); display:block; margin-bottom:0.5rem;
+    font-weight:500;
+  }
+  .body h3 {
+    font-family:var(--ff-display); font-weight:500;
+    font-size:1.15rem; margin:1.75rem 0 0.75rem;
+    letter-spacing:-0.01em;
+  }
+  .body p { margin-bottom:1.1rem; color:var(--ink-soft); }
+  .body p:last-child { margin-bottom:0; }
+  .body ul { margin:0.5rem 0 1.25rem 0; padding-left:1.2rem; }
+  .body ul li {
+    list-style:none; position:relative; padding-left:1rem; margin-bottom:0.55rem;
+    color:var(--ink-soft);
+  }
+  .body ul li::before {
+    content:""; position:absolute; left:0; top:0.65rem;
+    width:6px; height:1px; background:var(--gold);
+  }
+  .body strong { color:var(--ink); font-weight:600; }
+  .body em { color:var(--moss); font-style:italic; font-family:var(--ff-display); font-size:1.05em; }
+  .body a { color:var(--moss); border-bottom:1px solid var(--moss-light); transition:opacity 0.2s; }
+  .body a:hover { opacity:0.7; }
+
+  .callout {
+    background:var(--paper-soft); border:1px solid var(--line);
+    padding:1.5rem 1.75rem; margin:1.5rem 0;
+    border-left:3px solid var(--moss);
+  }
+  .callout p:last-child { margin-bottom:0; }
+
+  /* -------- Footer -------- */
+  .btm {
+    border-top:1px solid var(--line); padding:3rem 0;
+    background:var(--paper-deep);
+  }
+  .btm__inner {
+    display:flex; flex-wrap:wrap; gap:1.5rem; justify-content:space-between; align-items:center;
+    font-size:0.85rem; color:var(--ink-soft);
+  }
+  .btm a { color:var(--ink-soft); border-bottom:1px solid transparent; transition:border-color 0.3s; }
+  .btm a:hover { border-bottom-color:var(--moss); color:var(--moss); }
+  .btm__legal { display:flex; gap:1.5rem; flex-wrap:wrap; }
+
+  @media (max-width:840px) {
+    .article { grid-template-columns:1fr; gap:2rem; }
+    .toc { position:static; padding-bottom:1.5rem; border-bottom:1px solid var(--line); }
+    .toc ul { flex-direction:row; flex-wrap:wrap; gap:0.5rem 1rem; }
+    .toc a { border-left:0; padding:0; font-size:0.82rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top__inner">
+    <a href="../" class="logo">MoveOn<span class="dot"></span></a>
+    <a href="../" class="back">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Tillbaka till startsidan
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Juridik · Dokument 01 / 03</span>
+    <h1>Integritets&shy;<em>policy.</em></h1>
+    <p class="lede">Vi samlar bara in det vi måste, behåller det bara så länge vi behöver, och delar det aldrig vidare utan anledning. Så här fungerar det — i klartext.</p>
+    <p class="updated">Senast uppdaterad: 21 april 2026 · Version 1.0</p>
+  </div>
+</section>
+
+<section class="article">
+  <aside class="toc">
+    <h5>Innehåll</h5>
+    <ul>
+      <li><a href="#ansvarig">01 Ansvarig</a></li>
+      <li><a href="#uppgifter">02 Uppgifter vi samlar</a></li>
+      <li><a href="#andamal">03 Ändamål</a></li>
+      <li><a href="#rattslig">04 Rättslig grund</a></li>
+      <li><a href="#lagring">05 Lagringstid</a></li>
+      <li><a href="#delning">06 Delning</a></li>
+      <li><a href="#rattigheter">07 Dina rättigheter</a></li>
+      <li><a href="#sakerhet">08 Säkerhet</a></li>
+      <li><a href="#klagomal">09 Klagomål</a></li>
+      <li><a href="#kontakt">10 Kontakt</a></li>
+    </ul>
+  </aside>
+
+  <div class="wrap" style="padding:0; max-width:none;">
+    <div class="body">
+
+      <h2 id="ansvarig"><span class="num">01</span>Vem är ansvarig?</h2>
+      <p><strong>MoveOn Flytt &amp; Logistik AB</strong> (org.nr 559127-8461), Vasagatan 24, 111 20 Stockholm, är personuppgifts&shy;ansvarig för behandlingen av dina personuppgifter i samband med de tjänster vi tillhandahåller.</p>
+      <p>Kontakt: <a href="mailto:hej@moveon.se">hej@moveon.se</a> · <a href="tel:+4610199000">010 – 199 00 00</a></p>
+
+      <h2 id="uppgifter"><span class="num">02</span>Vilka uppgifter samlar vi in?</h2>
+      <p>Vi samlar endast in uppgifter som är nödvändiga för att kunna offerera, utföra och fakturera en flytt — samt för att uppfylla lagstadgade krav.</p>
+
+      <h3>När du begär offert</h3>
+      <ul>
+        <li>Namn, telefonnummer och e-postadress</li>
+        <li>Adresser (från och till)</li>
+        <li>Bostadstyp, yta och flyttdatum</li>
+        <li>Eventuella tilläggs&shy;önskemål (packning, flyttstäd, magasinering m.m.)</li>
+        <li>Fritext du själv skriver in i formuläret</li>
+      </ul>
+
+      <h3>När du blir kund</h3>
+      <ul>
+        <li>Personnummer (krävs för RUT-avdrag)</li>
+        <li>Faktureringsuppgifter</li>
+        <li>Uppgifter om bohag som behövs för att utföra flytten (tunga föremål, piano, värdeföremål)</li>
+        <li>Dokumentation av skador eller reklamationer</li>
+      </ul>
+
+      <h3>Automatiskt vid besök på sajten</h3>
+      <p>Vi använder <strong>inga</strong> spårnings- eller marknadsförings&shy;cookies. Webbservern loggar tekniska uppgifter (IP-adress, browser, sidvisningar) i upp till 30 dagar, enbart för drift- och säkerhetssyfte. Läs mer i vår <a href="../cookiepolicy/">cookiepolicy</a>.</p>
+
+      <h2 id="andamal"><span class="num">03</span>Varför behandlar vi uppgifterna?</h2>
+      <ul>
+        <li>För att skicka dig en offert och kommunicera om din förfrågan</li>
+        <li>För att planera, boka och utföra flytten</li>
+        <li>För att fakturera och administrera betalning</li>
+        <li>För att ansöka om RUT-avdrag hos Skatteverket</li>
+        <li>För att uppfylla skyldigheter enligt bokföringslag och skattelag</li>
+        <li>För att hantera reklamationer och försäkringsärenden</li>
+        <li>För att vid behov förbättra tjänsten utifrån sammanställd, icke-identifierbar statistik</li>
+      </ul>
+
+      <h2 id="rattslig"><span class="num">04</span>Rättslig grund</h2>
+      <ul>
+        <li><strong>Avtal (GDPR art. 6.1 b)</strong> — när vi offererar och utför flytten åt dig.</li>
+        <li><strong>Rättslig förpliktelse (art. 6.1 c)</strong> — bokföring, skatt, RUT-redovisning.</li>
+        <li><strong>Berättigat intresse (art. 6.1 f)</strong> — för att besvara förfrågningar, utvärdera kvalitet och driva sajten säkert. Vi har vägt ditt intresse av integritet mot vårt behov och bedömt att behandlingen är proportionerlig.</li>
+        <li><strong>Samtycke (art. 6.1 a)</strong> — om du anmäler dig till vårt nyhetsbrev. Du kan återkalla samtycket när som helst.</li>
+      </ul>
+
+      <h2 id="lagring"><span class="num">05</span>Hur länge sparar vi uppgifterna?</h2>
+      <p>Så kort som möjligt, men så länge som krävs:</p>
+      <ul>
+        <li><strong>Offertförfrågan som inte leder till avtal:</strong> 12 månader, sedan raderas den.</li>
+        <li><strong>Kunduppgifter kopplade till utförd flytt:</strong> 7 år efter senaste transaktionen (krav enligt bokföringslagen).</li>
+        <li><strong>Reklamationer och försäkringsärenden:</strong> 10 år från avslutat ärende.</li>
+        <li><strong>Nyhetsbrev:</strong> tills du avanmäler dig, därefter raderas uppgifterna inom 30 dagar.</li>
+        <li><strong>Serverloggar:</strong> 30 dagar.</li>
+      </ul>
+
+      <h2 id="delning"><span class="num">06</span>Vem delar vi uppgifter med?</h2>
+      <p>Vi delar aldrig dina uppgifter med tredje part för marknadsföring. Vi delar endast med parter som behöver uppgifterna för att vi ska kunna utföra uppdraget åt dig:</p>
+      <ul>
+        <li><strong>Skatteverket</strong> — för ansökan om RUT-avdrag.</li>
+        <li><strong>Bokföringsbyrå / revisor</strong> — för redovisning och bokslut.</li>
+        <li><strong>Försäkringsbolag</strong> — vid skadeärende eller anmälan.</li>
+        <li><strong>Betalnings- och fakturatjänst</strong> (t.ex. Fortnox/Billogram) — för att kunna fakturera dig.</li>
+        <li><strong>IT-leverantörer</strong> för e-post, webbhotell och CRM — bundna av personuppgifts&shy;biträdes&shy;avtal.</li>
+        <li><strong>Myndigheter</strong> om vi är skyldiga enligt lag.</li>
+      </ul>
+      <div class="callout">
+        <p><strong>Överföring utanför EU/EES:</strong> Vi strävar efter att hålla all databehandling inom EU/EES. Om en underleverantör behöver behandla uppgifter utanför EU, sker det endast med adekvata skyddsåtgärder (standardavtals&shy;klausuler enligt EU-kommissionens beslut).</p>
+      </div>
+
+      <h2 id="rattigheter"><span class="num">07</span>Dina rättigheter</h2>
+      <p>Enligt GDPR har du rätt att:</p>
+      <ul>
+        <li><strong>Få information</strong> om vilka uppgifter vi behandlar om dig (registerutdrag).</li>
+        <li><strong>Rätta</strong> felaktiga uppgifter.</li>
+        <li><strong>Radera</strong> uppgifter som vi inte längre har rätt att behandla ("rätten att bli glömd").</li>
+        <li><strong>Begränsa</strong> behandlingen under tiden en invändning utreds.</li>
+        <li><strong>Invända</strong> mot behandling som bygger på berättigat intresse.</li>
+        <li><strong>Flytta uppgifter</strong> (dataportabilitet) — i ett maskinläsbart format.</li>
+        <li><strong>Återkalla samtycke</strong> när som helst (t.ex. för nyhetsbrev).</li>
+      </ul>
+      <p>För att utöva någon av dessa rättigheter, kontakta oss på <a href="mailto:hej@moveon.se">hej@moveon.se</a>. Vi svarar inom 30 dagar. Vi kan behöva verifiera din identitet innan vi lämnar ut uppgifter.</p>
+
+      <h2 id="sakerhet"><span class="num">08</span>Säkerhet</h2>
+      <p>Vi skyddar dina uppgifter med tekniska och organisatoriska åtgärder som står i rimlig proportion till risken:</p>
+      <ul>
+        <li>Krypterad överföring (TLS/HTTPS) på webb och e-post</li>
+        <li>Begränsad åtkomst — endast medarbetare med legitimt behov</li>
+        <li>Loggning av åtkomst till känsliga register</li>
+        <li>Regelbundna säkerhets&shy;granskningar av leverantörer</li>
+        <li>Incidenthantering enligt GDPR art. 33–34 (anmälan inom 72 timmar vid allvarlig incident)</li>
+      </ul>
+
+      <h2 id="klagomal"><span class="num">09</span>Klagomål till tillsynsmyndighet</h2>
+      <p>Om du anser att vi behandlar dina uppgifter felaktigt kan du lämna klagomål till <strong>Integritets&shy;skydds&shy;myndigheten (IMY)</strong>, Box 8114, 104 20 Stockholm — <a href="https://www.imy.se">imy.se</a>. Vi ber dig dock att först höra av dig till oss, så försöker vi reda ut det tillsammans.</p>
+
+      <h2 id="kontakt"><span class="num">10</span>Kontakt</h2>
+      <p>Har du frågor om denna policy eller hur vi behandlar dina uppgifter?</p>
+      <div class="callout">
+        <p><strong>MoveOn Flytt &amp; Logistik AB</strong><br>
+        Vasagatan 24, 111 20 Stockholm<br>
+        <a href="mailto:hej@moveon.se">hej@moveon.se</a> · <a href="tel:+4610199000">010 – 199 00 00</a><br>
+        Org.nr 559127-8461</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="btm">
+  <div class="wrap btm__inner">
+    <span>© 2026 MoveOn Flytt &amp; Logistik AB</span>
+    <div class="btm__legal">
+      <a href="../integritetspolicy/">Integritetspolicy</a>
+      <a href="../cookiepolicy/">Cookiepolicy</a>
+      <a href="../villkor/">Allmänna villkor</a>
+      <a href="../">Startsida</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

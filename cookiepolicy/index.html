@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cookiepolicy — MoveOn</title>
+<meta name="description" content="MoveOn använder endast nödvändiga cookies. Ingen tracking. Inga marknadsföringscookies." />
+<meta name="theme-color" content="#1E3B2F" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,0..100;1,9..144,300..900,0..100&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --paper:#EDE6D6; --paper-deep:#E2DAC6; --paper-soft:#F3EEE0;
+    --ink:#161512; --ink-soft:#3B3A34; --mute:#8B8473; --line:#CFC6B2;
+    --moss:#1E3B2F; --moss-deep:#132720; --moss-light:#34563F;
+    --rust:#B5543A; --gold:#C79B3F;
+    --ff-display:"Fraunces","Georgia",serif;
+    --ff-body:"Instrument Sans",-apple-system,sans-serif;
+    --ff-mono:"JetBrains Mono",ui-monospace,monospace;
+    --max:1100px;
+    --gutter:clamp(1.25rem,4vw,3rem);
+  }
+  *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; }
+  body {
+    background:var(--paper); color:var(--ink);
+    font-family:var(--ff-body); font-size:1.0625rem; line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  body::before {
+    content:""; position:fixed; inset:0; pointer-events:none; z-index:1;
+    opacity:0.3; mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.09  0 0 0 0 0.08  0 0 0 0 0.07  0 0 0 0.18 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+  a { color:inherit; text-decoration:none; }
+  ul { list-style:none; }
+  ::selection { background:var(--moss); color:var(--paper); }
+
+  .wrap { max-width:var(--max); margin:0 auto; padding:0 var(--gutter); position:relative; z-index:2; }
+
+  .top { padding:1.75rem 0; border-bottom:1px solid var(--line); background:rgba(237,230,214,0.85); backdrop-filter:saturate(1.2) blur(8px); position:relative; z-index:10; }
+  .top__inner { display:flex; align-items:center; justify-content:space-between; gap:1.5rem; }
+  .logo { font-family:var(--ff-display); font-size:1.5rem; font-weight:500; letter-spacing:-0.02em; display:flex; align-items:center; gap:0.35rem; }
+  .logo .dot { width:6px; height:6px; background:var(--moss); border-radius:50%; }
+  .back { font-family:var(--ff-mono); font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-soft); display:inline-flex; align-items:center; gap:0.5rem; transition:color 0.3s; }
+  .back:hover { color:var(--moss); }
+  .back svg { transition:transform 0.3s cubic-bezier(0.22,1,0.36,1); }
+  .back:hover svg { transform:translateX(-3px); }
+
+  .hero { padding:clamp(4rem,9vw,7rem) 0 clamp(3rem,6vw,4.5rem); border-bottom:1px solid var(--line); }
+  .eyebrow { font-family:var(--ff-mono); font-size:0.72rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--ink-soft); display:flex; align-items:center; gap:0.75rem; }
+  .eyebrow::before { content:""; width:28px; height:1px; background:var(--ink-soft); }
+  h1 { font-family:var(--ff-display); font-weight:400; font-size:clamp(2.75rem,7vw,5.5rem); line-height:1.02; letter-spacing:-0.03em; margin-top:1.25rem; }
+  h1 em { font-style:italic; color:var(--moss); font-variation-settings:"opsz" 144, "SOFT" 80; }
+  .lede { font-family:var(--ff-display); font-weight:300; font-size:clamp(1.15rem,2vw,1.4rem); line-height:1.5; color:var(--ink-soft); max-width:60ch; margin-top:2rem; }
+  .updated { font-family:var(--ff-mono); font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--mute); margin-top:2.5rem; padding-top:1.25rem; border-top:1px solid var(--line); }
+
+  .article { padding:clamp(3rem,6vw,5rem) 0 clamp(4rem,8vw,7rem); }
+  .body { max-width:720px; }
+  .body h2 { font-family:var(--ff-display); font-weight:400; font-size:clamp(1.65rem,3vw,2.2rem); letter-spacing:-0.02em; margin:2.75rem 0 1rem; line-height:1.15; }
+  .body h2:first-child { margin-top:0; }
+  .body h2 .num { font-family:var(--ff-mono); font-size:0.7rem; letter-spacing:0.12em; color:var(--gold); display:block; margin-bottom:0.5rem; font-weight:500; }
+  .body p { margin-bottom:1.1rem; color:var(--ink-soft); }
+  .body strong { color:var(--ink); font-weight:600; }
+  .body em { color:var(--moss); font-style:italic; font-family:var(--ff-display); font-size:1.05em; }
+  .body a { color:var(--moss); border-bottom:1px solid var(--moss-light); }
+  .body a:hover { opacity:0.7; }
+
+  .cookie-card {
+    background:var(--paper-soft); border:1px solid var(--line);
+    padding:2rem; margin:2rem 0;
+    display:grid; grid-template-columns:auto 1fr; gap:1.5rem;
+    align-items:start;
+  }
+  .cookie-card__icon {
+    width:44px; height:44px; border-radius:50%;
+    background:var(--moss); color:var(--paper);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .cookie-card h3 { font-family:var(--ff-display); font-size:1.25rem; font-weight:500; margin-bottom:0.5rem; }
+  .cookie-card p { font-size:0.95rem; margin-bottom:0; color:var(--ink-soft); }
+  .cookie-card__meta {
+    display:flex; gap:1.5rem; flex-wrap:wrap; margin-top:1rem;
+    font-family:var(--ff-mono); font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--mute);
+  }
+  .cookie-card__meta strong { color:var(--ink); font-weight:500; }
+
+  .big-statement {
+    border:1px solid var(--line); border-left:4px solid var(--moss);
+    padding:2rem 2.25rem; margin:2.5rem 0;
+    background:var(--paper-soft);
+  }
+  .big-statement .tag {
+    font-family:var(--ff-mono); font-size:0.7rem; letter-spacing:0.14em; text-transform:uppercase;
+    color:var(--moss); margin-bottom:0.75rem; display:block;
+  }
+  .big-statement p {
+    font-family:var(--ff-display); font-size:1.3rem; font-weight:400;
+    line-height:1.4; color:var(--ink); margin:0;
+  }
+  .big-statement p em { font-style:italic; color:var(--moss); font-variation-settings:"opsz" 144, "SOFT" 80; }
+
+  .btm { border-top:1px solid var(--line); padding:3rem 0; background:var(--paper-deep); }
+  .btm__inner { display:flex; flex-wrap:wrap; gap:1.5rem; justify-content:space-between; align-items:center; font-size:0.85rem; color:var(--ink-soft); }
+  .btm a { color:var(--ink-soft); border-bottom:1px solid transparent; transition:border-color 0.3s; }
+  .btm a:hover { border-bottom-color:var(--moss); color:var(--moss); }
+  .btm__legal { display:flex; gap:1.5rem; flex-wrap:wrap; }
+
+  @media (max-width:640px) {
+    .cookie-card { grid-template-columns:1fr; gap:1rem; padding:1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top__inner">
+    <a href="../" class="logo">MoveOn<span class="dot"></span></a>
+    <a href="../" class="back">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Tillbaka till startsidan
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Juridik · Dokument 02 / 03</span>
+    <h1>Cookie&shy;<em>policy.</em></h1>
+    <p class="lede">Kort version: vi använder inga spårningscookies, inga marknadsförings&shy;cookies och inga analyscookies. Här är en längre förklaring.</p>
+    <p class="updated">Senast uppdaterad: 21 april 2026 · Version 1.0</p>
+  </div>
+</section>
+
+<section class="article">
+  <div class="wrap">
+    <div class="body">
+
+      <div class="big-statement">
+        <span class="tag">Vår hållning</span>
+        <p>Vi tycker att sajter ska fungera utan att <em>följa efter</em> sina besökare. Så vi gör det — inget mer, inget mindre.</p>
+      </div>
+
+      <h2><span class="num">01</span>Vad är en cookie?</h2>
+      <p>En cookie är en liten textfil som en webbplats kan lagra i din webbläsare. Den används oftast för att sajten ska komma ihåg något mellan sidladdningar — till exempel att du har accepterat cookiebannern eller fyllt i ett formulär till hälften.</p>
+      <p>Cookies kan delas in i grovt två kategorier: <strong>nödvändiga</strong> (sajten fungerar inte utan dem) och <strong>icke-nödvändiga</strong> (allt annat — analys, marknadsföring, personalisering, A/B-testning, spårning över olika sajter).</p>
+
+      <h2><span class="num">02</span>Vilka cookies använder MoveOn?</h2>
+      <p>Vi använder <strong>endast nödvändiga cookies</strong>. Konkret, på moveon.se finns dessa:</p>
+
+      <div class="cookie-card">
+        <div class="cookie-card__icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/><path d="M8.5 8.5v.01"/><path d="M16 15.5v.01"/><path d="M12 12v.01"/><path d="M11 17v.01"/><path d="M7 14v.01"/></svg>
+        </div>
+        <div>
+          <h3>moveon-cookies-v1</h3>
+          <p>Kommer ihåg att du har sett och klickat bort cookie&shy;informationen, så att banderollen inte dyker upp igen vid nästa besök. Ingen identifiering, ingen spårning — bara ett litet "ja, jag har sett informationen".</p>
+          <div class="cookie-card__meta">
+            <span>Typ: <strong>LocalStorage</strong></span>
+            <span>Lagringstid: <strong>Permanent (tills du rensar)</strong></span>
+            <span>Delas med tredje part: <strong>Nej</strong></span>
+          </div>
+        </div>
+      </div>
+
+      <h2><span class="num">03</span>Vilka cookies använder vi INTE?</h2>
+      <p>Vi vill vara explicit här, eftersom det är lätt att slinka in tredjeparts&shy;cookies utan att tänka på det:</p>
+      <p>Vi använder <strong>inte</strong> Google Analytics, Google Tag Manager, Meta Pixel, LinkedIn Insight Tag, Hotjar, Clarity, eller någon annan analys- eller beteendespårnings&shy;tjänst. Vi använder inte heller remarketing-pixlar, affiliate-spårning, eller cookies från reklamnätverk.</p>
+      <p>Google Fonts laddas från Googles CDN (fonts.gstatic.com) — detta sätter inga cookies men loggar tekniska förfrågningar hos Google enligt deras egna policys. Om du värderar detta högt kan du blockera Google Fonts i din webbläsare; sajten fallbackar till serif/sans-serif.</p>
+
+      <h2><span class="num">04</span>Serverloggar</h2>
+      <p>Vår webbserver (Github Pages) loggar tekniska uppgifter om inkommande förfrågningar — IP-adress, browser, sida — för drift- och säkerhetssyften. Dessa loggar är inte cookies och sparas i max 30 dagar. Läs mer i vår <a href="../integritetspolicy/">integritetspolicy</a>.</p>
+
+      <h2><span class="num">05</span>Hur hanterar jag cookies?</h2>
+      <p>Du kan när som helst radera cookies och LocalStorage-data via din webbläsares inställningar. I de flesta webbläsare hittar du det under <em>Inställningar → Sekretess → Rensa webbinformation</em>.</p>
+      <p>Om du raderar vår <code>moveon-cookies-v1</code> kommer cookiebannern att dyka upp igen vid nästa besök. Det är allt som händer.</p>
+
+      <h2><span class="num">06</span>Ändringar av denna policy</h2>
+      <p>Om vi någon gång börjar använda analys- eller marknadsförings&shy;cookies (vilket vi i nuläget inte planerar), kommer vi att uppdatera denna policy och inhämta aktivt samtycke via en ny cookiebanner innan någon sådan cookie sätts. Du kommer aldrig att upptäcka sådan förändring i efterhand.</p>
+
+      <h2><span class="num">07</span>Frågor?</h2>
+      <p>Hör av dig till <a href="mailto:hej@moveon.se">hej@moveon.se</a> — vi svarar gärna, på svenska, utan juristspråk.</p>
+
+    </div>
+  </div>
+</section>
+
+<footer class="btm">
+  <div class="wrap btm__inner">
+    <span>© 2026 MoveOn Flytt &amp; Logistik AB</span>
+    <div class="btm__legal">
+      <a href="../integritetspolicy/">Integritetspolicy</a>
+      <a href="../cookiepolicy/">Cookiepolicy</a>
+      <a href="../villkor/">Allmänna villkor</a>
+      <a href="../">Startsida</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

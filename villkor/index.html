@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Allmänna villkor — MoveOn</title>
+<meta name="description" content="Allmänna villkor för flyttuppdrag hos MoveOn. Vad ingår i priset, vad förväntar vi av dig, hur hanterar vi reklamationer." />
+<meta name="theme-color" content="#1E3B2F" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,0..100;1,9..144,300..900,0..100&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --paper:#EDE6D6; --paper-deep:#E2DAC6; --paper-soft:#F3EEE0;
+    --ink:#161512; --ink-soft:#3B3A34; --mute:#8B8473; --line:#CFC6B2;
+    --moss:#1E3B2F; --moss-deep:#132720; --moss-light:#34563F;
+    --rust:#B5543A; --gold:#C79B3F;
+    --ff-display:"Fraunces","Georgia",serif;
+    --ff-body:"Instrument Sans",-apple-system,sans-serif;
+    --ff-mono:"JetBrains Mono",ui-monospace,monospace;
+    --max:1100px;
+    --gutter:clamp(1.25rem,4vw,3rem);
+  }
+  *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; }
+  body {
+    background:var(--paper); color:var(--ink);
+    font-family:var(--ff-body); font-size:1.0625rem; line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  body::before {
+    content:""; position:fixed; inset:0; pointer-events:none; z-index:1;
+    opacity:0.3; mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.09  0 0 0 0 0.08  0 0 0 0 0.07  0 0 0 0.18 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+  a { color:inherit; text-decoration:none; }
+  ul { list-style:none; }
+  ::selection { background:var(--moss); color:var(--paper); }
+
+  .wrap { max-width:var(--max); margin:0 auto; padding:0 var(--gutter); position:relative; z-index:2; }
+
+  .top { padding:1.75rem 0; border-bottom:1px solid var(--line); background:rgba(237,230,214,0.85); backdrop-filter:saturate(1.2) blur(8px); position:relative; z-index:10; }
+  .top__inner { display:flex; align-items:center; justify-content:space-between; gap:1.5rem; }
+  .logo { font-family:var(--ff-display); font-size:1.5rem; font-weight:500; letter-spacing:-0.02em; display:flex; align-items:center; gap:0.35rem; }
+  .logo .dot { width:6px; height:6px; background:var(--moss); border-radius:50%; }
+  .back { font-family:var(--ff-mono); font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-soft); display:inline-flex; align-items:center; gap:0.5rem; transition:color 0.3s; }
+  .back:hover { color:var(--moss); }
+  .back svg { transition:transform 0.3s cubic-bezier(0.22,1,0.36,1); }
+  .back:hover svg { transform:translateX(-3px); }
+
+  .hero { padding:clamp(4rem,9vw,7rem) 0 clamp(3rem,6vw,4.5rem); border-bottom:1px solid var(--line); }
+  .eyebrow { font-family:var(--ff-mono); font-size:0.72rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--ink-soft); display:flex; align-items:center; gap:0.75rem; }
+  .eyebrow::before { content:""; width:28px; height:1px; background:var(--ink-soft); }
+  h1 { font-family:var(--ff-display); font-weight:400; font-size:clamp(2.75rem,7vw,5.5rem); line-height:1.02; letter-spacing:-0.03em; margin-top:1.25rem; }
+  h1 em { font-style:italic; color:var(--moss); font-variation-settings:"opsz" 144, "SOFT" 80; }
+  .lede { font-family:var(--ff-display); font-weight:300; font-size:clamp(1.15rem,2vw,1.4rem); line-height:1.5; color:var(--ink-soft); max-width:60ch; margin-top:2rem; }
+  .updated { font-family:var(--ff-mono); font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--mute); margin-top:2.5rem; padding-top:1.25rem; border-top:1px solid var(--line); }
+
+  .article { padding:clamp(3rem,6vw,5rem) 0 clamp(4rem,8vw,7rem); display:grid; grid-template-columns:220px 1fr; gap:clamp(2rem,5vw,5rem); align-items:start; }
+  .toc { position:sticky; top:2rem; font-size:0.88rem; }
+  .toc h5 { font-family:var(--ff-mono); font-size:0.7rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--mute); margin-bottom:1rem; font-weight:500; }
+  .toc ul { display:flex; flex-direction:column; gap:0.55rem; }
+  .toc a { color:var(--ink-soft); border-left:1px solid var(--line); padding:0.15rem 0 0.15rem 0.9rem; transition:all 0.3s; display:block; }
+  .toc a:hover { color:var(--moss); border-left-color:var(--moss); }
+
+  .body h2 { font-family:var(--ff-display); font-weight:400; font-size:clamp(1.65rem,3vw,2.2rem); letter-spacing:-0.02em; margin:2.75rem 0 1rem; line-height:1.15; scroll-margin-top:2rem; }
+  .body h2:first-child { margin-top:0; }
+  .body h2 .num { font-family:var(--ff-mono); font-size:0.7rem; letter-spacing:0.12em; color:var(--gold); display:block; margin-bottom:0.5rem; font-weight:500; }
+  .body h3 { font-family:var(--ff-display); font-weight:500; font-size:1.15rem; margin:1.75rem 0 0.75rem; letter-spacing:-0.01em; }
+  .body p { margin-bottom:1.1rem; color:var(--ink-soft); }
+  .body ul { margin:0.5rem 0 1.25rem 0; padding-left:1.2rem; }
+  .body ul li { list-style:none; position:relative; padding-left:1rem; margin-bottom:0.55rem; color:var(--ink-soft); }
+  .body ul li::before { content:""; position:absolute; left:0; top:0.65rem; width:6px; height:1px; background:var(--gold); }
+  .body strong { color:var(--ink); font-weight:600; }
+  .body em { color:var(--moss); font-style:italic; font-family:var(--ff-display); font-size:1.05em; }
+  .body a { color:var(--moss); border-bottom:1px solid var(--moss-light); }
+  .body a:hover { opacity:0.7; }
+
+  .callout { background:var(--paper-soft); border:1px solid var(--line); padding:1.5rem 1.75rem; margin:1.5rem 0; border-left:3px solid var(--moss); }
+  .callout p:last-child { margin-bottom:0; }
+
+  .btm { border-top:1px solid var(--line); padding:3rem 0; background:var(--paper-deep); }
+  .btm__inner { display:flex; flex-wrap:wrap; gap:1.5rem; justify-content:space-between; align-items:center; font-size:0.85rem; color:var(--ink-soft); }
+  .btm a { color:var(--ink-soft); border-bottom:1px solid transparent; transition:border-color 0.3s; }
+  .btm a:hover { border-bottom-color:var(--moss); color:var(--moss); }
+  .btm__legal { display:flex; gap:1.5rem; flex-wrap:wrap; }
+
+  @media (max-width:840px) {
+    .article { grid-template-columns:1fr; gap:2rem; }
+    .toc { position:static; padding-bottom:1.5rem; border-bottom:1px solid var(--line); }
+    .toc ul { flex-direction:row; flex-wrap:wrap; gap:0.5rem 1rem; }
+    .toc a { border-left:0; padding:0; font-size:0.82rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top__inner">
+    <a href="../" class="logo">MoveOn<span class="dot"></span></a>
+    <a href="../" class="back">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Tillbaka till startsidan
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Juridik · Dokument 03 / 03</span>
+    <h1>Allmänna <em>villkor.</em></h1>
+    <p class="lede">Det här är vårt löfte i text. Vad som ingår, vad vi förväntar oss av dig, hur vi hanterar det när något går fel. Skrivet på svenska — inte juristspråk.</p>
+    <p class="updated">Senast uppdaterad: 21 april 2026 · Version 1.0</p>
+  </div>
+</section>
+
+<section class="article">
+  <aside class="toc">
+    <h5>Innehåll</h5>
+    <ul>
+      <li><a href="#allmant">01 Allmänt</a></li>
+      <li><a href="#offert">02 Offert &amp; bokning</a></li>
+      <li><a href="#pris">03 Pris &amp; betalning</a></li>
+      <li><a href="#rut">04 RUT-avdrag</a></li>
+      <li><a href="#avbokning">05 Av- och ombokning</a></li>
+      <li><a href="#kundens">06 Kundens ansvar</a></li>
+      <li><a href="#moveons">07 MoveOns åtagande</a></li>
+      <li><a href="#ansvar">08 Ansvar &amp; försäkring</a></li>
+      <li><a href="#reklamation">09 Reklamation</a></li>
+      <li><a href="#force">10 Force majeure</a></li>
+      <li><a href="#tvist">11 Tvist</a></li>
+    </ul>
+  </aside>
+
+  <div class="wrap" style="padding:0; max-width:none;">
+    <div class="body">
+
+      <h2 id="allmant"><span class="num">01</span>Allmänt</h2>
+      <p>Dessa villkor gäller mellan <strong>MoveOn Flytt &amp; Logistik AB</strong>, org.nr 559127-8461 ("MoveOn", "vi"), och den privatperson eller organisation ("kunden", "du") som beställer ett flyttuppdrag eller tilläggs&shy;tjänst av oss.</p>
+      <p>Villkoren gäller alla uppdrag om inget annat skriftligen avtalats. De kompletteras av den offert och orderbekräftelse som utfärdats för det specifika uppdraget. Vid motstridighet har offerten och orderbekräftelsen företräde framför dessa allmänna villkor.</p>
+      <p>För konsument&shy;uppdrag tillämpas dessutom <strong>konsumenttjänstlagen (1985:716)</strong> i tillämpliga delar. Du har alltid minst den konsument&shy;skyddsnivå som lagen föreskriver — våra villkor inskränker aldrig dina rättigheter som konsument.</p>
+
+      <h2 id="offert"><span class="num">02</span>Offert och bokning</h2>
+      <p>En offert är giltig i <strong>30 dagar</strong> från utfärdandedatum om inget annat anges. Offerten baseras på de uppgifter du lämnat och kan justeras vid behov om förutsättningarna visar sig vara väsentligt annorlunda på plats (t.ex. mer bohag, längre bärsträcka, trappor som inte nämnts).</p>
+      <p>Ett avtal uppstår när du skriftligen accepterar offerten (via e-post, sms eller vår bokningsportal) och MoveOn har bekräftat bokningen med en orderbekräftelse.</p>
+
+      <h3>Prisformer</h3>
+      <ul>
+        <li><strong>Fast pris</strong> — vanligast för flyttar med väl definierat omfång. Priset gäller förutsatt att du lämnat korrekta uppgifter.</li>
+        <li><strong>Löpande räkning (timpris)</strong> — används för uppdrag där omfattningen är osäker eller på kundens uttryckliga önskemål. Vi ger alltid en takpris&shy;indikation så att du inte överraskas.</li>
+      </ul>
+
+      <h2 id="pris"><span class="num">03</span>Pris och betalning</h2>
+      <p>Alla priser anges inklusive moms till konsument och exklusive moms till företag. Priset inkluderar drivmedel, grundförsäkring, flyttkartong&shy;återtag och normal bärning (upp till 4 trappor). Tillkommande avgifter som parkerings&shy;tillstånd, betald parkering eller bomavgift meddelas i förväg och specificeras på fakturan.</p>
+      <p>Fakturering sker efter utfört uppdrag med betalningsvillkor <strong>10 dagar netto</strong>. Vid utebliven betalning utgår dröjsmålsränta enligt räntelagen samt påminnelseavgift och eventuell inkassokostnad enligt lag.</p>
+      <p>Vi accepterar faktura, Swish, bankkort och banköverföring. Företag kan ansöka om utökat kredit&shy;villkor vid bokning.</p>
+
+      <h2 id="rut"><span class="num">04</span>RUT-avdrag</h2>
+      <p>Som privatperson har du som regel rätt till <strong>RUT-avdrag</strong> med 50 % av arbetskostnaden (dock max 75 000 kr per person och år för personer under 65 år, 100 000 kr för personer 65 år eller äldre — gränserna följer gällande skattelag).</p>
+      <p>MoveOn ansöker om avdraget hos Skatteverket åt dig. Fakturan visar priset efter avdrag. Om Skatteverket av någon anledning inte godkänner ansökan (t.ex. förbrukad ram, felaktigt personnummer, tidigare utbetalt avdrag) faktureras det kvarvarande beloppet till dig.</p>
+      <p>För att ansökan ska gå igenom behöver vi ditt <strong>personnummer</strong> samt att du är folkbokförd eller stadigvarande vistas i Sverige. RUT-avdrag gäller endast arbetskostnad — inte material, bortforsling av skräp eller transport&shy;avstånd.</p>
+
+      <h2 id="avbokning"><span class="num">05</span>Av- och ombokning</h2>
+      <p>Vi tillämpar tydliga avboknings&shy;villkor eftersom en flytt&shy;logistik är känslig för sena ändringar:</p>
+      <ul>
+        <li><strong>Mer än 14 dagar före flyttdagen:</strong> kostnadsfritt.</li>
+        <li><strong>7–14 dagar före:</strong> 25 % av offertbeloppet.</li>
+        <li><strong>2–6 dagar före:</strong> 50 % av offertbeloppet.</li>
+        <li><strong>Mindre än 48 timmar före:</strong> 100 % av offertbeloppet.</li>
+      </ul>
+      <p>Ombokning till ett nytt datum inom 60 dagar är kostnadsfri om vi kan hitta ett nytt slot utan att flytta annan kund — meddela oss så fort du vet, så löser vi det om vi kan.</p>
+      <div class="callout">
+        <p><strong>Undantag vid force majeure eller akut sjukdom:</strong> vi tillämpar avbokningsgebyret rimligt och tar hänsyn till omständigheterna. Hör av dig — vi är människor.</p>
+      </div>
+
+      <h2 id="kundens"><span class="num">06</span>Kundens ansvar</h2>
+      <p>För att vi ska kunna utföra uppdraget professionellt behöver du:</p>
+      <ul>
+        <li>Säkerställa att vi har tillträde till bostaden på avtalad tid.</li>
+        <li>Meddela i förväg om det finns trappor, trånga passager, lastbil&shy;förbud, ömtåliga/tunga föremål (piano, kassaskåp, konst, större akvarier) eller andra faktorer som påverkar arbetet.</li>
+        <li>Ansöka om parkerings&shy;tillstånd eller reservera parkerings&shy;plats vid behov — eller be oss göra det mot avgift.</li>
+        <li>Ha packat, märkt och förslutit kartonger vid flytt&shy;start (om inte packhjälp är beställd).</li>
+        <li>Tömma frys, säkra kyl- och frysinnehåll samt koppla från elektronik, vitvaror, lampor och gardin&shy;stänger — om inte detta ingår i det bokade uppdraget.</li>
+        <li>Informera oss om värdeföremål eller särskilt ömtåliga föremål som kräver extra försiktighet.</li>
+        <li>Säkerställa att djur och barn är omhändertagna under flyttmomentet.</li>
+      </ul>
+      <p>Om det efter bokning visar sig att verkliga förhållanden avviker väsentligt från de uppgifter du lämnat, har vi rätt att justera tidsåtgång och pris samt att pausa arbetet tills förhållandena är avhjälpta.</p>
+
+      <h2 id="moveons"><span class="num">07</span>MoveOns åtagande</h2>
+      <p>Vi åtar oss att:</p>
+      <ul>
+        <li>Utföra uppdraget fackmannamässigt och varsamt.</li>
+        <li>Använda utbildad, anställd personal — <strong>inga underleverantörer utan ditt godkännande</strong>.</li>
+        <li>Komma i tid. Är vi försenade mer än 60 minuter utan giltigt skäl, tillämpar vi vår <em>punktlighetsgaranti</em> (rabatt enligt offertens villkor).</li>
+        <li>Hantera ditt bohag som vårt eget.</li>
+        <li>Lämna bostaden i det skick vi kom in i den (flyttstäd ingår endast om beställt).</li>
+        <li>Kommunicera tydligt om något uppstår under uppdraget.</li>
+      </ul>
+
+      <h2 id="ansvar"><span class="num">08</span>Ansvar och försäkring</h2>
+      <p>MoveOn har <strong>ansvarsförsäkring</strong> som täcker skador på bohag under transport, bärning och förvaring, enligt nedan:</p>
+      <ul>
+        <li>Grundförsäkring: upp till 400 000 kr per uppdrag, självrisk 3 000 kr.</li>
+        <li>Utökad försäkring kan tecknas för uppdrag med särskilt högt värde — offereras separat.</li>
+      </ul>
+      <p>Ersättning sker till dagsvärde (återanskaffnings&shy;värde med avdrag för ålder och slitage), dock maximalt faktiskt värde. Föremål med affektionsvärde ersätts till marknadsvärde.</p>
+      <p>Vi ansvarar <strong>inte</strong> för:</p>
+      <ul>
+        <li>Skador på föremål du själv har packat och som inte varit synbart skadade vid lastning, om skadan inte kan härledas till vårdslös hantering från vår sida.</li>
+        <li>Skador orsakade av bristfällig emballering från kundens sida.</li>
+        <li>Värdeföremål (kontanter, smycken, värdepapper, konst över 50 000 kr) som inte särskilt anmälts vid bokning.</li>
+        <li>Skador på elektronik där det inte kan påvisas att skadan uppstått vid flytten (t.ex. trasiga bildskärmar utan synliga yttre skador).</li>
+        <li>Följdskador eller indirekta förluster såsom utebliven hyresintäkt, förlorad arbetstid m.m., utöver vad konsument&shy;tjänstlagen föreskriver.</li>
+      </ul>
+
+      <h2 id="reklamation"><span class="num">09</span>Reklamation</h2>
+      <p>Upptäcker du en skada eller fel — hör av dig direkt. Formellt:</p>
+      <ul>
+        <li>Synliga skador på bohag ska anmälas <strong>inom 7 dagar</strong> efter utfört uppdrag.</li>
+        <li>Dolda skador (t.ex. på innehållet i en kartong) ska anmälas så snart skadan upptäckts, dock senast <strong>inom 3 månader</strong>.</li>
+        <li>Skicka din reklamation till <a href="mailto:hej@moveon.se">hej@moveon.se</a> med bilder, beskrivning och uppdragsnummer.</li>
+      </ul>
+      <p>Vi återkommer inom 5 arbetsdagar med besked. Godkänd reklamation regleras antingen genom reparation, ersättnings&shy;föremål eller ekonomisk kompensation. Vi strävar efter att lösa det snabbt och utan diskussion — en nöjd kund är alltid värd mer än ett vunnet argument.</p>
+
+      <h2 id="force"><span class="num">10</span>Force majeure</h2>
+      <p>Vi ansvarar inte för förseningar eller uteblivna åtaganden som beror på omständigheter utanför vår kontroll — till exempel extrema väderförhållanden, myndighets&shy;beslut, strejk, större trafikstörning, brand eller pandemi&shy;relaterade restriktioner. Vid sådana händelser kontaktar vi dig omgående och söker gemensam lösning (omboknings&shy;förslag, delreduktion etc.).</p>
+
+      <h2 id="tvist"><span class="num">11</span>Tvist</h2>
+      <p>Om vi inte kan komma överens har du som konsument rätt att vända dig till <strong>Allmänna reklamations&shy;nämnden (ARN)</strong>. MoveOn följer ARN:s rekommendationer. För tvister som inte kan lösas genom ARN gäller svensk rätt och Stockholms tingsrätt som första instans.</p>
+
+      <div class="callout">
+        <p><strong>Vårt löfte bakom dessa villkor:</strong> Vi skriver dem tydliga för att du ska veta vad du får — inte för att gömma småtext. Om något i ett enskilt uppdrag känns orimligt: ring, skriv, hör av dig. Vi lyssnar.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="btm">
+  <div class="wrap btm__inner">
+    <span>© 2026 MoveOn Flytt &amp; Logistik AB</span>
+    <div class="btm__legal">
+      <a href="../integritetspolicy/">Integritetspolicy</a>
+      <a href="../cookiepolicy/">Cookiepolicy</a>
+      <a href="../villkor/">Allmänna villkor</a>
+      <a href="../">Startsida</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
